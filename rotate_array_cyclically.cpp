@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void segregateElements(int arr[],int n){
+void rotateElements(int arr[],int n){
     int last = arr[n-1];
     for(int i=n-1;i>0;i--){
         arr[i] = arr[i-1];
@@ -12,10 +12,13 @@ void segregateElements(int arr[],int n){
 
 int main() {
 
-        int n = 8;
+        int n;
         int a[] = {9, 8, 7, 6, 4, 2, 1, 3};
-		segregateElements(a,n);
 
+        // calculating size of array
+        n = sizeof(a)/sizeof(*a);
+
+		rotateElements(a,n);
         // call multiple times to rotate more
 		// segregateElements(a,n);
 
