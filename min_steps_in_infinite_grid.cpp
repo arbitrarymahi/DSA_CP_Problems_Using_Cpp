@@ -2,21 +2,13 @@
 using namespace std;
 
 int coverPoints(vector<int> &A, vector<int> &B) {
-    int currentX = A[0];
-    int currentY = B[0];
-    int targetx = 1;
-    int targety = 1;
-    int steps = 0;
     int n = 0;
-    while(n!=A.size()-1){
+    int steps = 0;
+    while(n<A.size()-1){
+   
+      // find dist between pairs and proceed..
     
-            
-        // find dist between pairs and proceed..
-        int x = abs(A[targetx]-currentX);
-        int y = abs(B[targety]-currentY);
-        steps+= max(x,y);
-        currentX = A[targetx++];
-        currentY = B[targety++];
+        steps+= max(abs(A[n+1]-A[n]),abs(B[n+1]-B[n]));
         n++;
 
     }
