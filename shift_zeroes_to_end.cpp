@@ -2,14 +2,9 @@
 using namespace std;
 
 void segregateElements(vector<int> A,int n){
-       int zcount = 0;
+
     int nonzeroPointer = 0;
     // int n = A.size();
-    for(int i=0;i<n;i++){
-        if(A[i]==0){
-            zcount++;
-        }
-    }
 
     for(int i=0;i<n;i++){
         if(A[i]!=0){
